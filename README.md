@@ -15,13 +15,16 @@ Published at `https://themishkacoder.github.io/threads/`
 | `callback.html` | shows the OAuth `code`, never redirects | Redirect URI |
 | `assets/style.css` | shared styling | — |
 
+## Brand
+
+- Name: **Hardflag**
+- Contact: **hardflag@proton.me**
+
 ## Replace before publishing
 
-Three placeholders appear across the pages:
+One placeholder remains:
 
-1. `YOURNAME` — beehiiv subdomain, in `index.html` (`https://YOURNAME.beehiiv.com/subscribe`)
-2. `YOUR_EMAIL` — contact address, in `privacy.html` and `terms.html`
-3. `Chain Alerts` — brand name, in the `<title>`, `.brand` and footer of every page
+1. `YOURNAME` — beehiiv subdomain, in `index.html` and the footer (`https://YOURNAME.beehiiv.com/subscribe`)
 
 ## Meta developer app
 
