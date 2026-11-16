@@ -3,129 +3,150 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chain Alerts — on-chain risk, listings and unlocks</title>
-<meta name="description" content="Contract risk flags, exchange listings and token unlocks, published as they happen. No signals. No hype. Just data.">
-<meta name="theme-color" content="#0a0b0d">
+<title>Chain Alerts — what the contract says before you touch it</title>
+<meta name="description" content="New contracts carry warnings in the bytecode: mint functions, hidden owners, taxes that change after you buy. Chain Alerts reads them and publishes what it finds.">
+<meta name="theme-color" content="#eceee8">
 <meta property="og:title" content="Chain Alerts">
-<meta property="og:description" content="Contract risk flags, exchange listings and token unlocks, published as they happen.">
+<meta property="og:description" content="Contract risk, exchange listings and unlock schedules, read from the source and published as plain numbers.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0b0d'/><circle cx='50' cy='50' r='16' fill='%235eead4'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23eceee8'/><path d='M26 24h48v10H26zm0 21h48v10H26zm0 21h30v10H26z' fill='%23171a18'/></svg>">
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="./"><span class="dot"></span><b>Chain&nbsp;Alerts</b></a>
-    <nav class="nav-links">
-      <a href="#what" class="hide-sm">What you get</a>
+  <div class="sheet masthead">
+    <a class="wordmark" href="./">Chain<span>Alerts</span></a>
+    <nav>
+      <a href="#published">What we publish</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main class="sheet">
 
-  <p class="eyebrow">Automated · Event-driven · EU</p>
+  <div class="hero">
 
-  <h1>On-chain alerts.<br><em>No signals.</em></h1>
+    <div class="hero-copy">
+      <h1>The flags were there the whole time.</h1>
+      <p>
+        New contracts get deployed every minute. Most carry warnings inside the
+        bytecode: a mint function, an owner who can move balances, a tax that
+        changes after you buy. Chain Alerts reads them and publishes what it
+        finds, a few times a day, in plain numbers.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://YOURNAME.beehiiv.com/subscribe">Get the alerts by email</a>
+        <a class="quiet-link" href="#sample">See a sample</a>
+      </div>
+      <p class="note">
+        Free. One email a week at most. One click to leave.
+      </p>
+    </div>
 
-  <p class="lede">
-    Contract risk flags, exchange listings and token unlock schedules — published
-    the moment the data changes. No predictions, no price targets, no “100x”.
-  </p>
+    <figure class="docket" id="sample">
+      <div class="docket-head">
+        <span class="docket-id">0x9f2c…a41d</span>
+        <span class="stamp">flagged</span>
+      </div>
+      <dl class="fields">
+        <div><dt>honeypot</dt><dd class="bad">sells blocked</dd></div>
+        <div><dt>owner_can_mint</dt><dd class="bad">unlimited supply</dd></div>
+        <div><dt>sell_tax</dt><dd class="bad">12%, changeable</dd></div>
+        <div><dt>liquidity_locked</dt><dd class="ok">no</dd></div>
+        <div><dt>wallets in, 1h</dt><dd>47</dd></div>
+      </dl>
+      <div class="barcode" aria-hidden="true"></div>
+      <figcaption>
+        Example. These are properties observed in a contract at a point in time,
+        not a verdict on a team or an asset.
+      </figcaption>
+    </figure>
 
-  <div class="cta-row">
-    <a class="btn btn-primary" href="https://YOURNAME.beehiiv.com/subscribe">
-      Get the alerts
-    </a>
-    <a class="btn btn-ghost" href="#what">What you get</a>
-    <span class="hint">free · weekly · unsubscribe anytime</span>
   </div>
 
-  <section>
-    <h2>Sample alert</h2>
-    <div class="sample">
-      <div class="sample-head">
-        contract risk
-        <span class="tag">flagged</span>
-      </div>
-      <div class="sample-body">New token on BSC: <span class="ok">$ABC</span>
+  <section class="block" id="published">
+    <h2>What we publish</h2>
+    <div class="rows">
 
-<span class="k">flags</span>
-  honeypot            <span class="bad">sells blocked</span>
-  owner_can_mint      <span class="bad">unlimited supply</span>
-  sell_tax            <span class="bad">12% · changeable</span>
-  liquidity_locked    <span class="ok">no</span>
-
-<span class="k">wallets in</span>           47 in the last hour
-<span class="k">contract</span>              0x9f2c…a41d</div>
-    </div>
-  </section>
-
-  <section id="what">
-    <h2>What you get</h2>
-    <div class="grid">
-      <div class="card">
-        <span class="num">01</span>
+      <div class="row">
         <h3>Contract risk</h3>
-        <p>Honeypots, mint functions, hidden owners and changeable taxes — pulled straight from the contract, not from a press release.</p>
+        <p>
+          Honeypots where sells are blocked, contracts where the owner can mint
+          supply or move balances, taxes that can be raised after you buy.
+        </p>
       </div>
-      <div class="card">
-        <span class="num">02</span>
+
+      <div class="row">
         <h3>Listings</h3>
-        <p>New pairs on tier-1 venues, with the window and the numbers. What happened the last five times, not what might happen.</p>
+        <p>
+          New pairs on major venues, with the size of the market they land in and
+          what happened to the last five comparable listings.
+        </p>
       </div>
-      <div class="card">
-        <span class="num">03</span>
+
+      <div class="row">
         <h3>Unlocks</h3>
-        <p>Upcoming supply unlocks with size in dollars and the historical pattern around comparable events.</p>
+        <p>
+          Upcoming supply unlocks in dollars, alongside the price behaviour around
+          the last few unlocks of the same size.
+        </p>
       </div>
+
     </div>
   </section>
 
-  <section>
-    <h2>What you won’t get</h2>
-    <ul class="list neg">
-      <li>Price predictions or entry calls</li>
-      <li>“Guaranteed” anything</li>
-      <li>Paid shilling disguised as analysis</li>
-      <li>Daily noise — only events that clear a threshold</li>
-    </ul>
+  <section class="block">
+    <h2>What we don't publish</h2>
+    <p class="plain">
+      No price calls. No entry points. No <strong>guaranteed</strong> anything, and
+      no paid coverage of a specific asset. If nothing clears the threshold on a
+      given day, nothing goes out that day.
+    </p>
   </section>
 
-  <section>
+  <section class="block">
     <h2>How it works</h2>
-    <ul class="list">
-      <li>Events are pulled from public on-chain and exchange sources</li>
-      <li>Each one is filtered against a risk or significance threshold</li>
-      <li>Duplicates are dropped before anything is published</li>
-      <li>Alerts go out on Threads and by email — no more than a few a day</li>
-    </ul>
+    <ol class="steps">
+      <li>
+        <b>Collect.</b> Events are pulled from public on-chain data and exchange
+        announcements.
+      </li>
+      <li>
+        <b>Filter.</b> Each one has to clear a risk or size threshold before it is
+        worth anyone's attention.
+      </li>
+      <li>
+        <b>Publish.</b> Duplicates are dropped, then the alert goes to Threads and
+        to your inbox.
+      </li>
+    </ol>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="sheet">
     <div class="foot">
-      <span class="hint">© <span id="y"></span> Chain Alerts</span>
-      <div class="foot-links">
+      <span class="mark">Chain Alerts, published from the EU</span>
+      <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="https://YOURNAME.beehiiv.com/subscribe">Subscribe</a>
-      </div>
+      </nav>
     </div>
     <p class="disclosure">
-      Some links on this site and in our posts are affiliate links. We may earn a
-      commission if you sign up through them, at no extra cost to you. Nothing here
-      is financial, investment or tax advice. Crypto assets are volatile and you can
+      Some links in our posts and emails are affiliate links. If you sign up through
+      one, we may earn a commission at no extra cost to you. Nothing here is
+      financial, investment or tax advice. Crypto assets are volatile and you can
       lose money.
     </p>
   </div>
 </footer>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
